@@ -3,7 +3,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
 (function(window) {
   var HelloSpeaker = {};
   HelloSpeaker.speak = function(name) {
-    console.log("Hello " + name);
+    document.getElementById('output').innerHTML += `<p class="hello">Hello ${name}</p>`;
   };
   window.HelloSpeaker = HelloSpeaker;
 })(window);
@@ -11,7 +11,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
 (function(window) {
   var ByeSpeaker = {};
   ByeSpeaker.speak = function(name) {
-    console.log("Goodbye " + name);
+    document.getElementById('output').innerHTML += `<p class="goodbye">Goodbye ${name}</p>`;
   };
   window.ByeSpeaker = ByeSpeaker;
 })(window);
